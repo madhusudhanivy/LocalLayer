@@ -10,6 +10,7 @@
 		C37BA1FC26989AF800FF04AC /* LocalLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37BA1F226989AF700FF04AC /* LocalLayer.framework */; };
 		C37BA20126989AF800FF04AC /* LocalLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37BA20026989AF800FF04AC /* LocalLayerTests.swift */; };
 		C37BA20326989AF800FF04AC /* LocalLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = C37BA1F526989AF700FF04AC /* LocalLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C37BA20E26989B3B00FF04AC /* String+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37BA20D26989B3B00FF04AC /* String+Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		C37BA1FB26989AF800FF04AC /* LocalLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37BA20026989AF800FF04AC /* LocalLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLayerTests.swift; sourceTree = "<group>"; };
 		C37BA20226989AF800FF04AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C37BA20D26989B3B00FF04AC /* String+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Test.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		C37BA1F426989AF700FF04AC /* LocalLayer */ = {
 			isa = PBXGroup;
 			children = (
+				C37BA20C26989B0D00FF04AC /* Extensions */,
 				C37BA1F526989AF700FF04AC /* LocalLayer.h */,
 				C37BA1F626989AF700FF04AC /* Info.plist */,
 			);
@@ -84,6 +87,14 @@
 				C37BA20226989AF800FF04AC /* Info.plist */,
 			);
 			path = LocalLayerTests;
+			sourceTree = "<group>";
+		};
+		C37BA20C26989B0D00FF04AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C37BA20D26989B3B00FF04AC /* String+Test.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 				TargetAttributes = {
 					C37BA1F126989AF700FF04AC = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 					C37BA1FA26989AF800FF04AC = {
 						CreatedOnToolsVersion = 12.5;
@@ -194,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C37BA20E26989B3B00FF04AC /* String+Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +354,7 @@
 		C37BA20726989AF800FF04AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Games.LocalLayer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +379,7 @@
 		C37BA20826989AF800FF04AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -387,6 +403,7 @@
 		C37BA20A26989AF800FF04AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LocalLayerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +421,7 @@
 		C37BA20B26989AF800FF04AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LocalLayerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
